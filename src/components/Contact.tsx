@@ -1,10 +1,9 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Github, Linkedin, Phone, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Phone, Send, Terminal } from "lucide-react";
 
 const Contact: React.FC = () => {
   const { toast } = useToast();
@@ -41,9 +40,6 @@ const Contact: React.FC = () => {
               <Terminal className="mr-2" />
               Let's Connect
             </h3>
-            <p className="text-lg text-gray-300">
-              Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
-            </p>
             
             <div className="space-y-6">
               <div className="flex items-center p-4 bg-gray-800 rounded-lg tech-border">
