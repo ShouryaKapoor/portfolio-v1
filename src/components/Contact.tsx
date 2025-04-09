@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, GitHub, Linkedin, Phone } from "lucide-react";
+import { Mail, Github, Linkedin, Phone } from "lucide-react";
 
 const Contact: React.FC = () => {
   const { toast } = useToast();
@@ -50,7 +50,7 @@ const Contact: React.FC = () => {
                 </a>
               </div>
               <div className="flex items-center">
-                <GitHub className="w-5 h-5 text-portfolio-blue mr-3" />
+                <Github className="w-5 h-5 text-portfolio-blue mr-3" />
                 <a href="https://github.com/ShouryaKapoor" target="_blank" rel="noopener noreferrer" className="portfolio-link hover:underline">
                   github.com/ShouryaKapoor
                 </a>
