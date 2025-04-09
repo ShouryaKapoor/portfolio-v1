@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700;800&family=Fira+Code:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -44,8 +44,14 @@
     @apply border-border;
     scroll-behavior: smooth;
   }
+  
+  html, body {
+    @apply cursor-none;
+  }
+  
   body {
     @apply bg-background text-foreground font-sans;
+    overflow-x: hidden;
   }
   
   h1, h2, h3, h4, h5, h6 {
@@ -69,14 +75,94 @@
   }
   
   .project-card {
-    @apply bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100;
+    @apply bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl border border-gray-100 hover:transform hover:scale-105;
   }
   
   .nav-link {
-    @apply font-medium text-gray-600 hover:text-portfolio-blue transition-colors duration-200 px-3 py-2;
+    @apply font-medium text-gray-600 hover:text-portfolio-blue transition-colors duration-200 px-3 py-2 relative;
+  }
+  
+  .nav-link::after {
+    @apply content-[''] absolute w-0 h-[2px] bg-portfolio-blue bottom-0 left-0 transition-all duration-300;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
   }
   
   .nav-link.active {
     @apply text-portfolio-blue;
+  }
+  
+  .nav-link.active::after {
+    @apply w-full;
+  }
+  
+  /* Terminal blinking cursor animation */
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  .terminal-cursor {
+    @apply animate-[blink_1s_infinite];
+  }
+  
+  /* Matrix-like animation */
+  .matrix-text {
+    @apply font-mono text-green-500 overflow-hidden whitespace-pre;
+  }
+
+  /* Tech border effect */
+  .tech-border {
+    @apply relative;
+  }
+  
+  .tech-border::after {
+    @apply content-[''] absolute inset-0 border-2 border-portfolio-blue rounded-lg;
+    animation: border-pulse 2s infinite;
+  }
+  
+  @keyframes border-pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(52, 152, 219, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 10px rgba(52, 152, 219, 0);
+    }
+  }
+
+  /* Glow effect for tech elements */
+  .tech-glow {
+    filter: drop-shadow(0 0 8px rgba(52, 152, 219, 0.6));
+  }
+  
+  /* Hide default cursor when custom cursor is active */
+  @media (min-width: 768px) {
+    body * {
+      cursor: none !important;
+    }
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
 }
