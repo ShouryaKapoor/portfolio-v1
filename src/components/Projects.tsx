@@ -84,7 +84,7 @@ const Project: React.FC<ProjectProps> = ({
 const Projects: React.FC = () => {
   const projects: ProjectProps[] = [
     {
-      title: "Dynamic Apple Store",
+      title: "Dynamic Apple Web Page",
       description: "A clone of Apple iPhone 15 Pro website using React and TailwindCSS",
       technologies: [
         { name: "JavaScript" },
@@ -95,8 +95,8 @@ const Projects: React.FC = () => {
         { name: "ThreeJS" },
         { name: "GSAP" }
       ],
-      github: "https://github.com/ShouryaKapoor/apple-store-clone",
-      liveDemo: "https://apple-store-clone-demo.vercel.app",
+      github: "https://github.com/ShouryaKapoor/Apple-Web-Page-Clone",
+      liveDemo: "https://apple-website-clone-ox6q.vercel.app/",
       image: "https://placehold.co/600x400/e2e8f0/64748b?text=Apple+Store+Clone",
       features: [
         "Beautiful Subtle Smooth Animations using GSAP (Greensock Animations) and ThreeJs for displaying iPhone 15 Pro models in various colors and shapes.",
@@ -104,8 +104,8 @@ const Projects: React.FC = () => {
       ]
     },
     {
-      title: "User Authentication Page",
-      description: "A complete authentication system with register, login and signup functionality",
+      title: "#Flex - Social Media App",
+      description: "Full-stack Next.js 14 app using App Router, Prisma, Postgres, Clerk, and Shadcn — with full authentication, file uploads, server actions, and optimistic UI updates",
       technologies: [
         { name: "JavaScript" },
         { name: "MongoDB" }, 
@@ -113,14 +113,13 @@ const Projects: React.FC = () => {
         { name: "ReactJS" },
         { name: "NodeJS" }
       ],
-      github: "https://github.com/ShouryaKapoor/auth-system",
-      liveDemo: "https://auth-system-demo.vercel.app",
+      github: "https://github.com/ShouryaKapoor/Flex-Social",
+      liveDemo: "https://flex-social-wine.vercel.app/",
       image: "https://placehold.co/600x400/e2e8f0/64748b?text=Auth+System",
       features: [
-        "Designed and implemented a secure user authentication system with login, signup, and registration functionalities.",
-        "Integrated MongoDB for efficient user data storage, ensuring seamless account creation and authentication.",
-        "Utilized React.js for a dynamic and responsive frontend. Node.js and Express.js handled backend authentication logic.",
-        "Implemented bcrypt for password hashing, JWT for secure session management, enhancing system security and user privacy."
+        "App Router: Server Components, Layouts, Route Handlers",
+        "Authentication & Authorization with Clerk.",
+        "Optimistic updates, caching, and revalidation magic.",
       ]
     },
     {
